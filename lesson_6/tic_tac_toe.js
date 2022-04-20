@@ -514,6 +514,18 @@ function playAgainOrQuit() {
   }
 }
 
+// validates and returns user input when asked if they'd like to play again
+// any response other than y or yes we'll take as a no
+function playAgain() {
+  let choice = readline.question("Would you like to play again (y/n)? ");
+
+  if (choice.toLowerCase() === 'y' || choice.toLowerCase() === 'yes') {
+    return 'y';
+  } else {
+    return 'n';
+  }
+}
+
 /* FUNCTION TO WRAP UP EVERYTHING IN ONE PACKAGE */
 
 function playTicTacToe() {
